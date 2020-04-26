@@ -17,7 +17,15 @@ namespace MemoryGameForLawyers
   {
     StackLayout[] stackSorteio;
     List<StackLayout> stackMatched = new List<StackLayout>();
-    
+    List<StackLayout> stacksPais = new List<StackLayout>();
+    Frame[] frameDescriptions = new Frame[4];
+    Label[] labelDescriptions = new Label[4];
+
+    StackLayout[] stackOcupations = new StackLayout[4];
+    Frame[] frameOcupations = new Frame[4];
+    Label[] labelOcupations = new Label[4];
+    Image[] imageOcupations = new Image[4];
+
     public const string Professor = "Ministra aulas, prepara o material didático das aulas de Direito conforme orientação e conteúdo previamente distribuído, aplica provas, desenvolve trabalhos em aula e esclarece dúvidas.";
     public const string JulgadorDeLicitacao = "Exerçam a função de receber, examinar e julgar todos os documentos e procedimentos relativos às licitações e ao cadastramento de licitantes, conforme o artigo 6º, XVI da Lei 8666/93.";
     public const string GerenteJuridico = "Atua como gestor e mentor, contribuindo para a formação dos membros da equipe. É responsável por uma adequação jurídica completa na empresa, devendo ter uma clara comunicação com diversos outros setores da organização.";
@@ -114,13 +122,7 @@ namespace MemoryGameForLawyers
       StackLayout auditorJuridicoDesc = new StackLayout();
       stackSorteio = new StackLayout[8] { professorImg, professorDesc, julgadorDeLicitacaoImg, julgadorDeLicitacaoDesc, gerenteJuridicoImg, gerenteJuridicoDesc, auditorJuridicoImg, auditorJuridicoDesc };
 
-      Frame[] frameDescriptions = new Frame[4];
-      Label[] labelDescriptions = new Label[4];
 
-      StackLayout[] stackOcupations = new StackLayout[4];
-      Frame[] frameOcupations = new Frame[4];
-      Label[] labelOcupations = new Label[4];
-      Image[] imageOcupations = new Image[4];
 
       CreateOcupations(imageOcupations, labelOcupations, frameOcupations, stackOcupations);
       CreateDescriptions(frameDescriptions, labelDescriptions);
@@ -204,43 +206,66 @@ namespace MemoryGameForLawyers
       StackLayout06.Children.Add(stackSorteio[shuffled[6]]);
       StackLayout07.Children.Add(stackSorteio[shuffled[7]]);
 
+      stacksPais.Add(StackLayout00);
+      stacksPais.Add(StackLayout01);
+      stacksPais.Add(StackLayout02);
+      stacksPais.Add(StackLayout03);
+      stacksPais.Add(StackLayout04);
+      stacksPais.Add(StackLayout05);
+      stacksPais.Add(StackLayout06);
+      stacksPais.Add(StackLayout07);
     }
 
     public StackLayout VerificaStackLayout(StackLayout stackSelected)
     {
-      if (stackSelected.Children.Contains(stackSorteio[0]))
+      for (int i = 0; i < stackSorteio.Length; i++)
       {
-        return stackSorteio[1];
-      }
-      if (stackSelected.Children.Contains(stackSorteio[1]))
-      {
-        return stackSorteio[0];
-      }
-      if (stackSelected.Children.Contains(stackSorteio[2]))
-      {
-        return stackSorteio[3];
-      }
-      if (stackSelected.Children.Contains(stackSorteio[3]))
-      {
-        return stackSorteio[2];
-      }
-      if (stackSelected.Children.Contains(stackSorteio[4]))
-      {
-        return stackSorteio[5];
-      }
-      if (stackSelected.Children.Contains(stackSorteio[5]))
-      {
-        return stackSorteio[4];
-      }
-      if (stackSelected.Children.Contains(stackSorteio[6]))
-      {
-        return stackSorteio[7];
-      }
-      if (stackSelected.Children.Contains(stackSorteio[7]))
-      {
-        return stackSorteio[6];
+        if (stackSelected.Children.Contains(stackSorteio[i]))
+        {
+          if (i == 0 || i == 2 || i == 4 || i == 6)
+          {
+            return stackSorteio[i + 1];
+          }
+          else
+          {
+            return stackSorteio[i - 1];
+          }
+        }
       }
       return stackSorteio[0];
+      //if (stackSelected.Children.Contains(stackSorteio[0]))
+      //{
+      //  return stackSorteio[1];
+      //}
+      //if (stackSelected.Children.Contains(stackSorteio[1]))
+      //{
+      //  return stackSorteio[0];
+      //}
+      //if (stackSelected.Children.Contains(stackSorteio[2]))
+      //{
+      //  return stackSorteio[3];
+      //}
+      //if (stackSelected.Children.Contains(stackSorteio[3]))
+      //{
+      //  return stackSorteio[2];
+      //}
+      //if (stackSelected.Children.Contains(stackSorteio[4]))
+      //{
+      //  return stackSorteio[5];
+      //}
+      //if (stackSelected.Children.Contains(stackSorteio[5]))
+      //{
+      //  return stackSorteio[4];
+      //}
+      //if (stackSelected.Children.Contains(stackSorteio[6]))
+      //{
+      //  return stackSorteio[7];
+      //}
+      //if (stackSelected.Children.Contains(stackSorteio[7]))
+      //{
+      //  return stackSorteio[6];
+      //}
+      //return stackSorteio[0];
     }
     public bool VerificaStackLayoutVisible(StackLayout stackOriginalSelected)
     {
@@ -252,39 +277,69 @@ namespace MemoryGameForLawyers
     }
     public StackLayout VerificaStackLayoutCorrespondente(StackLayout stackSelected)
     {
-      if (StackLayout00.Children.Contains(stackSelected))
+      foreach (StackLayout item in stacksPais)
       {
-        return StackLayout00;
+        if (item.Children.Contains(stackSelected))
+        {
+          return item;
+        }
       }
-      if (StackLayout01.Children.Contains(stackSelected))
-      {
-        return StackLayout01;
-      }
-      if (StackLayout02.Children.Contains(stackSelected))
-      {
-        return StackLayout02;
-      }
-      if (StackLayout03.Children.Contains(stackSelected))
-      {
-        return StackLayout03;
-      }
-      if (StackLayout04.Children.Contains(stackSelected))
-      {
-        return StackLayout04;
-      }
-      if (StackLayout05.Children.Contains(stackSelected))
-      {
-        return StackLayout05;
-      }
-      if (StackLayout06.Children.Contains(stackSelected))
-      {
-        return StackLayout06;
-      }
-      if (StackLayout07.Children.Contains(stackSelected))
-      {
-        return StackLayout07;
-      }
+      //if (StackLayout00.Children.Contains(stackSelected))
+      //{
+      //  return StackLayout00;
+      //}
+      //if (StackLayout01.Children.Contains(stackSelected))
+      //{
+      //  return StackLayout01;
+      //}
+      //if (StackLayout02.Children.Contains(stackSelected))
+      //{
+      //  return StackLayout02;
+      //}
+      //if (StackLayout03.Children.Contains(stackSelected))
+      //{
+      //  return StackLayout03;
+      //}
+      //if (StackLayout04.Children.Contains(stackSelected))
+      //{
+      //  return StackLayout04;
+      //}
+      //if (StackLayout05.Children.Contains(stackSelected))
+      //{
+      //  return StackLayout05;
+      //}
+      //if (StackLayout06.Children.Contains(stackSelected))
+      //{
+      //  return StackLayout06;
+      //}
+      //if (StackLayout07.Children.Contains(stackSelected))
+      //{
+      //  return StackLayout07;
+      //}
       return stackSorteio[0];
+    }
+    private void ChangeFrameColors(StackLayout Stack1, StackLayout Stack2)
+    {
+      if (Stack1.Children.Contains(stackSorteio[0]) || Stack2.Children.Contains(stackSorteio[0]))
+      {
+        frameOcupations[0].BorderColor = Color.LightGreen;
+        frameDescriptions[0].BorderColor = Color.LightGreen;
+      }
+      if (Stack1.Children.Contains(stackSorteio[2]) || Stack2.Children.Contains(stackSorteio[2]))
+      {
+        frameOcupations[1].BorderColor = Color.LightGreen;
+        frameDescriptions[1].BorderColor = Color.LightGreen;
+      }
+      if (Stack1.Children.Contains(stackSorteio[4]) || Stack2.Children.Contains(stackSorteio[4]))
+      {
+        frameOcupations[2].BorderColor = Color.LightGreen;
+        frameDescriptions[2].BorderColor = Color.LightGreen;
+      }
+      if (Stack1.Children.Contains(stackSorteio[6]) || Stack2.Children.Contains(stackSorteio[6]))
+      {
+        frameOcupations[3].BorderColor = Color.LightGreen;
+        frameDescriptions[3].BorderColor = Color.LightGreen;
+      }
     }
 
 
@@ -300,6 +355,7 @@ namespace MemoryGameForLawyers
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout00);
+        ChangeFrameColors(stackOriginalCorrespondente, StackLayout00);
       }
     }
 
@@ -314,6 +370,7 @@ namespace MemoryGameForLawyers
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout01);
+        ChangeFrameColors(stackOriginalCorrespondente, StackLayout01);
       }
     }
 
@@ -328,8 +385,10 @@ namespace MemoryGameForLawyers
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout02);
+        ChangeFrameColors(stackOriginalCorrespondente, StackLayout02);
       }
     }
+
 
     private void ImageButton_Clicked_3(object sender, EventArgs e)
     {
@@ -342,6 +401,7 @@ namespace MemoryGameForLawyers
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout03);
+        ChangeFrameColors(stackOriginalCorrespondente, StackLayout03);
       }
     }
 
@@ -356,6 +416,7 @@ namespace MemoryGameForLawyers
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout04);
+        ChangeFrameColors(stackOriginalCorrespondente, StackLayout04);
       }
     }
 
@@ -370,6 +431,7 @@ namespace MemoryGameForLawyers
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout05);
+        ChangeFrameColors(stackOriginalCorrespondente, StackLayout05);
       }
     }
 
@@ -384,6 +446,7 @@ namespace MemoryGameForLawyers
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout06);
+        ChangeFrameColors(stackOriginalCorrespondente, StackLayout06);
       }
     }
 
@@ -398,6 +461,7 @@ namespace MemoryGameForLawyers
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout07);
+        ChangeFrameColors(stackOriginalCorrespondente, StackLayout07);
       }
     }
 
