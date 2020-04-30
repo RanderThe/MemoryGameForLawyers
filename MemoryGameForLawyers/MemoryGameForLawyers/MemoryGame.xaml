@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MemoryGameForLawyers.MemoryGame"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#FFFFFF" Margin="0" Padding="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+            <Frame x:Name="ItensGame" Margin="0" Padding="0"  BorderColor="Transparent" BackgroundColor="#FFFFFF">
+                <StackLayout Margin="0" Padding="0" BackgroundColor="Transparent">
+                    <Label Margin="0,0,0,15" HorizontalTextAlignment="Center"  Text="Encontre a profissão que corresponde as funções"></Label>
+                    <Frame HorizontalOptions="FillAndExpand" Margin="5" Padding="0">
+                        <Grid Margin="0" Padding="0" ColumnSpacing="0" RowSpacing="0" BackgroundColor="Transparent">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <!--Linha 0-->
+                            <!--Coluna 0-->
+                            <Frame Margin="0,0,0,0" Grid.Column="0" BackgroundColor="Transparent" Grid.Row="0" Padding="0" BorderColor="Transparent">
+                                <StackLayout Padding="0" Margin="0" Spacing="0">
+                                    <StackLayout x:Name="StackLayout00" Padding="0" Margin="0" Spacing="0" IsVisible="False">
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="StackLayout00Tapped"/>
+                                        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                    <StackLayout x:Name="StackIconDireito0" Padding="0" Margin="0,0,0,0" Spacing="0" IsVisible="True">
+                                        <ImageButton Source="iconDireito.png" Clicked="ImageButton_Clicked_0" Margin="0,0,0,0" Scale="0.8" Padding="0" BackgroundColor="Transparent" BorderColor="Transparent" BorderWidth="2"  CornerRadius="5">
+                                        </ImageButton>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--Coluna 1-->
+                            <Frame  BackgroundColor="Transparent" Margin="0,0,0,0" Padding="0"  Grid.Column="1" Grid.Row="0">
+                                <StackLayout Padding="0" Margin="0" Spacing="0">
+                                    <StackLayout x:Name="StackLayout01" Padding="0" Margin="0" Spacing="0" IsVisible="False">
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="StackLayout01Tapped"/>
+                                        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                    <StackLayout x:Name="StackIconDireito1" Padding="0" Margin="0" IsVisible="True" Spacing="0">
+                                        <ImageButton Source="iconDireito.png" Clicked="ImageButton_Clicked_1" Margin="0,0,0,0" Scale="0.8" Padding="0" BackgroundColor="Transparent" BorderColor="Transparent" BorderWidth="2" CornerRadius="5">
+                                        </ImageButton>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+
+                            <!--Linha 1-->
+                            <!--Coluna 0-->
+                            <Frame Margin="0,0,0,0" BackgroundColor="Transparent" Grid.Column="0" Grid.Row="1" Padding="0" BorderColor="Transparent">
+                                <StackLayout Padding="0" Margin="0" Spacing="0">
+                                    <StackLayout x:Name="StackLayout02" Padding="0" Margin="0" Spacing="0" IsVisible="False">
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="StackLayout02Tapped"/>
+                                        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                    <StackLayout x:Name="StackIconDireito2" Padding="0" Margin="0" Spacing="0" IsVisible="True">
+                                        <ImageButton Source="iconDireito.png" Clicked="ImageButton_Clicked_2" Margin="0,30,0,0" Scale="0.8" Padding="0" BackgroundColor="Transparent" BorderColor="Transparent" BorderWidth="2" CornerRadius="5">
+                                        </ImageButton>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                            <!--Coluna 1-->
+                            <Frame  Margin="0,0,0,0" Padding="0"  Grid.Column="1" Grid.Row="1">
+                                <StackLayout Padding="0" Margin="0" Spacing="0">
+                                    <StackLayout x:Name="StackLayout03" Padding="0" Margin="0" Spacing="0" IsVisible="False">
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="StackLayout03Tapped"/>
+                                        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                    <StackLayout x:Name="StackIconDireito3" Padding="0" Margin="0" Spacing="0" IsVisible="True">
+                                        <ImageButton Source="iconDireito.png" Clicked="ImageButton_Clicked_3" Margin="0,30,0,0" Scale="0.8" Padding="0" BackgroundColor="Transparent" BorderColor="Transparent" BorderWidth="2" CornerRadius="5">
+                                        </ImageButton>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+
+                            <!--Linha 2-->
+                            <!--Coluna 0-->
+                            <Frame Margin="0,0,0,0" BackgroundColor="Transparent" Grid.Column="0" Grid.Row="2" Padding="0" BorderColor="Transparent">
+                                <StackLayout Padding="0" Margin="0" Spacing="0">
+                                    <StackLayout  x:Name="StackLayout04" Padding="0" Margin="0" Spacing="0" IsVisible="False">
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="StackLayout04Tapped"/>
+                                        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                    <StackLayout x:Name="StackIconDireito4" Padding="0" Margin="0" Spacing="0" IsVisible="True">
+                                        <ImageButton Source="iconDireito.png" Clicked="ImageButton_Clicked_4" Margin="0,30,0,0" Scale="0.8" Padding="0" BackgroundColor="Transparent" BorderColor="Transparent" BorderWidth="2" CornerRadius="5">
+                                        </ImageButton>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--Coluna 1-->
+                            <Frame  Margin="0,0,0,0" Padding="0"  Grid.Column="1" Grid.Row="2">
+                                <StackLayout Padding="0" Margin="0" Spacing="0">
+                                    <StackLayout x:Name="StackLayout05" Padding="0" Margin="0" Spacing="0" IsVisible="False">
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="StackLayout05Tapped"/>
+                                        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                    <StackLayout x:Name="StackIconDireito5" Padding="0" Margin="0" Spacing="0" IsVisible="True">
+                                        <ImageButton Source="iconDireito.png" Clicked="ImageButton_Clicked_5" Margin="0,30,0,0" Scale="0.8" Padding="0" BackgroundColor="Transparent" BorderColor="Transparent" BorderWidth="2" CornerRadius="5">
+                                        </ImageButton>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+
+                            <!--Linha 3-->
+                            <!--Coluna 0-->
+                            <Frame Margin="0,0,0,0" BackgroundColor="Transparent" Grid.Column="0" Grid.Row="3" Padding="0">
+                                <StackLayout Padding="0" Margin="0" Spacing="0">
+                                    <StackLayout x:Name="StackLayout06" Padding="0" Margin="0" Spacing="0" IsVisible="False">
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="StackLayout06Tapped"/>
+                                        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                    <StackLayout x:Name="StackIconDireito6" Padding="0" Margin="0,30,0,0" Spacing="0" IsVisible="True">
+                                        <ImageButton Source="iconDireito.png" Clicked="ImageButton_Clicked_6" Margin="0,0,0,0" Scale="0.8" Padding="0" BackgroundColor="Transparent" BorderColor="Transparent" BorderWidth="2" CornerRadius="5">
+                                        </ImageButton>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+
+                            <!--Coluna 1-->
+                            <Frame  Margin="0,0,0,0" Padding="0" BackgroundColor="Transparent"  Grid.Column="1" Grid.Row="3">
+                                <StackLayout Padding="0" Margin="0" Spacing="0">
+                                    <StackLayout x:Name="StackLayout07" Padding="0" Margin="0" Spacing="0" IsVisible="False">
+                                        <StackLayout.GestureRecognizers>
+                                            <TapGestureRecognizer CommandParameter="{Binding .}" Tapped="StackLayout07Tapped"/>
+                                        </StackLayout.GestureRecognizers>
+                                    </StackLayout>
+                                    <StackLayout x:Name="StackIconDireito7" Padding="0" Margin="0" Spacing="0" IsVisible="True">
+                                        <ImageButton Source="iconDireito.png" Clicked="ImageButton_Clicked_7" Margin="0,30,0,0" Scale="0.8" Padding="0" BackgroundColor="Transparent" BorderColor="Transparent" BorderWidth="2" CornerRadius="5">
+                                        </ImageButton>
+                                    </StackLayout>
+                                </StackLayout>
+                            </Frame>
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

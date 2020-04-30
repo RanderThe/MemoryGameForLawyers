@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MemoryGameForLawyers.Home"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame Padding="0" 
+                       Margin="0"
+                       VerticalOptions="FillAndExpand" 
+                       HorizontalOptions="FillAndExpand" 
+                       BorderColor="#B6BDBF"
+                       HeightRequest="44"   
+                       HasShadow="True">
+                <Button x:Name="BtnMemoryGame" 
+                        Text="MEMORY GAME" 
+                        FontSize="19"                             
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Fill" 
+                        HeightRequest="44"   
+                        Margin="0"
+                        Padding="0"
+                        IsEnabled="true" 
+                        Clicked="BtnMemoryGame_Clicked"  
+                        BackgroundColor="#0C9ABE" 
+                        TextColor="White"/>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
