@@ -14,17 +14,15 @@ namespace MemoryGameForLawyers
     public App()
     {
       InitializeComponent();
-
-      MainPage = new MainPage();
     }
 
     protected override void OnStart()
     {
       Device.BeginInvokeOnMainThread(async () =>
       {
-          MainPage = new NavigationPage(new Home()
-          {
-          });
+        MainPage = new NavigationPage(new Home()
+        {
+        });
       });
     }
 

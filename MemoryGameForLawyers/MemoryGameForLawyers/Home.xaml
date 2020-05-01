@@ -4,30 +4,105 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:custom="clr-namespace:MemoryGameForLawyers.Custom"
              x:Class="MemoryGameForLawyers.Home"
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
-        <StackLayout>
-            <Frame Padding="0" 
-                       Margin="0"
-                       VerticalOptions="FillAndExpand" 
-                       HorizontalOptions="FillAndExpand" 
-                       BorderColor="#B6BDBF"
-                       HeightRequest="44"   
-                       HasShadow="True">
-                <Button x:Name="BtnMemoryGame" 
-                        Text="MEMORY GAME" 
-                        FontSize="19"                             
-                        VerticalOptions="Center" 
-                        HorizontalOptions="Fill" 
-                        HeightRequest="44"   
-                        Margin="0"
+        <StackLayout Padding="0" Margin="0" Spacing="0">
+            <Grid Margin="0" ColumnSpacing="0" RowSpacing="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <custom:CustomFrameGradiente  Grid.Row="0"
+                                              StartColor="#8B0000" 
+                                              EndColor="#A52A2A"               
+                                              Padding="0" 
+                                              Margin="0"
+                                              HeightRequest="99999"
+                                              VerticalOptions="Fill" 
+                                              HorizontalOptions="Fill" >
+                    <Label Text="teste"></Label>
+                </custom:CustomFrameGradiente>
+
+                <Grid Grid.Row="0" Margin="0" Padding="0" VerticalOptions="Center" ColumnSpacing="0" RowSpacing="0" BackgroundColor="Transparent">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <custom:ColorIconButton Grid.Row="0"
+                                            Margin="0"
+                                            Source="iconLei"
+                                            Scale="0.7"
+                                            HorizontalOptions="FillAndExpand"
+                                            VerticalOptions="FillAndExpand"
+                                            BackgroundColor="Transparent"
+                                            Foreground="White">
+                        
+                    </custom:ColorIconButton>
+                    <Label Grid.Row="1"
+                           Margin="40,0,40,20" 
+                           Text="ESCOLHA DIREITO" 
+                           FontFamily="Exo2Bold.ttf#Exo2Bold"
+                           TextColor="White" 
+                           HorizontalTextAlignment="Center"
+                           FontSize="36"></Label>
+                    <Frame 
+                        Grid.Row="2"
+                        Margin="40,20,40,0"
                         Padding="0"
-                        IsEnabled="true" 
-                        Clicked="BtnMemoryGame_Clicked"  
-                        BackgroundColor="#0C9ABE" 
-                        TextColor="White"/>
-            </Frame>
+                        CornerRadius="10"
+                        VerticalOptions="Center" 
+                        HeightRequest="60" 
+                        WidthRequest="30" 
+                        BorderColor="White"
+                        BackgroundColor="Transparent"
+                        HasShadow="True">
+                        <Button 
+                            BorderColor="White"
+                            Text="Memory Game" 
+                            FontFamily="Exo2Regular.ttf#Exo2Regular"
+                            FontSize="19"                             
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Fill"
+                            WidthRequest="30"
+                            HeightRequest="60"   
+                            Padding="0"
+                            IsEnabled="true" 
+                            Clicked="BtnMemoryGame_Clicked"  
+                            BackgroundColor="Transparent" 
+                            TextColor="White"/>
+                    </Frame>
+                    <Frame 
+                        Grid.Row="3"
+                        Margin="40,0,40,20"
+                        Padding="0"
+                        CornerRadius="10"
+                        VerticalOptions="Center" 
+                        HeightRequest="60" 
+                        WidthRequest="30" 
+                        BorderColor="White"
+                        BackgroundColor="Transparent"
+                        HasShadow="True">
+                        <Button 
+                            BorderColor="White"
+                            x:Name="BtnMemoryGame" 
+                            Text="Quiz" 
+                            FontFamily="Exo2Regular.ttf#Exo2Regular"
+                            FontSize="19"                             
+                            VerticalOptions="Center" 
+                            HorizontalOptions="Fill"
+                            WidthRequest="30"
+                            HeightRequest="60"   
+                            Padding="0"
+                            IsEnabled="true" 
+                            Clicked="BtnMemoryGame_Clicked"  
+                            BackgroundColor="Transparent" 
+                            TextColor="White"/>
+                    </Frame>
+                </Grid>
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
