@@ -12,7 +12,6 @@ namespace MemoryGameForLawyers
   [XamlCompilation(XamlCompilationOptions.Compile)]
   public partial class MemoryGame : ContentPage
   {
-
     StackLayout[] stackSorteio;
     List<StackLayout> stackMatched = new List<StackLayout>();
     List<StackLayout> stacksPais = new List<StackLayout>();
@@ -247,8 +246,30 @@ namespace MemoryGameForLawyers
       StackLayout[] stacksIconDireito = new StackLayout[8] { StackIconDireito0, StackIconDireito1, StackIconDireito2, StackIconDireito3, StackIconDireito4, StackIconDireito5, StackIconDireito6, StackIconDireito7 };
       StackLayout[] stacksDoSorteio = new StackLayout[8] { StackLayout00, StackLayout01, StackLayout02, StackLayout03, StackLayout04, StackLayout05, StackLayout06, StackLayout07 };
 
-      if (CountStackLayoutVisible() > 1)
+      if (CountStackLayoutVisible() >= 2)
       {
+        //  foreach (StackLayout item in stacksDoSorteio)
+        //  {
+        //    if (stackMatched.Contains(item) == false)
+        //    {
+        //      item.IsVisible = false;
+        //    }
+        //  else
+        //  {
+        //    item.IsVisible = true;
+        //  }
+        //}
+        //  foreach (StackLayout item in stacksIconDireito)
+        //  {
+        //    if (stackMatched.Contains(item) == false)
+        //    {
+        //      item.IsVisible = true;
+        //    }
+        //  else
+        //  {
+        //    item.IsVisible = false;
+        //  }
+        //}
         for (int i = 0; i < 8; i++)
         {
           if (stackMatched.Contains(stacksIconDireito[i]) == false)

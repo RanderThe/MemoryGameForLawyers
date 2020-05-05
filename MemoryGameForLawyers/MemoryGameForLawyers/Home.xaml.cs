@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MemoryGameForLawyers.Quiz;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,18 @@ namespace MemoryGameForLawyers
       {
         await App.CreateWaitPage(Color.White, "Carregando jogo");
         await Navigation.PushAsync(new MemoryGame()
+        {
+        });
+        await App.DestroiWaitPage();
+      });
+    }
+
+    private void BtnQuiz_Clicked(object sender, EventArgs e)
+    {
+      Device.BeginInvokeOnMainThread(async () =>
+      {
+        await App.CreateWaitPage(Color.White, "Carregando jogo");
+        await Navigation.PushAsync(new Pergunta1()
         {
         });
         await App.DestroiWaitPage();

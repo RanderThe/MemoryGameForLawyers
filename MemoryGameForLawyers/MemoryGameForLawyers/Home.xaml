@@ -97,7 +97,7 @@
                             HeightRequest="60"   
                             Padding="0"
                             IsEnabled="true" 
-                            Clicked="BtnMemoryGame_Clicked"  
+                            Clicked="BtnQuiz_Clicked"  
                             BackgroundColor="Transparent" 
                             TextColor="White"/>
                     </Frame>

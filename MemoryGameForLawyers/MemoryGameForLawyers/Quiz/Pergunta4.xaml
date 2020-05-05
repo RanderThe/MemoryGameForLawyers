@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="MemoryGameForLawyers.Quiz.Pergunta4">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#fbfbfb" Padding="0" Margin="0">
+            <Label Text="Você se considera mais: "
+                   FontAttributes="Bold"
+                   FontSize="24"
+                   Margin="0,20,0,0"
+                   Padding="0"
+                   VerticalOptions="Start" 
+                   TextColor="Black"
+                   HorizontalOptions="CenterAndExpand" />
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Frame 
+                    Grid.Row="0"
+                    Margin="16"
+                    Padding="0"
+                    CornerRadius="10"
+                    VerticalOptions="Center" 
+                    HeightRequest="60" 
+                    WidthRequest="30" 
+                    BorderColor="White"
+                    BackgroundColor="#ffffff"
+                    HasShadow="True">
+                    <Button 
+                        BorderColor="White"
+                        Text="Dinâmico" 
+                        FontSize="19"                             
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Fill"
+                        WidthRequest="30"
+                        HeightRequest="60"   
+                        Padding="0"
+                        Margin="0"
+                        IsEnabled="true" 
+                        BackgroundColor="Transparent" 
+                        TextColor="#1d2426"/>
+                </Frame>
+
+                <Frame 
+                    Grid.Row="1"
+                    Margin="16"
+                    Padding="0"
+                    CornerRadius="10"
+                    VerticalOptions="Center" 
+                    HeightRequest="60" 
+                    WidthRequest="30" 
+                    BorderColor="White"
+                    BackgroundColor="#ffffff"
+                    HasShadow="True">
+                    <Button 
+                        BorderColor="White"
+                        Text="Ágil" 
+                        FontSize="19"                             
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Fill"
+                        WidthRequest="30"
+                        HeightRequest="60"   
+                        Padding="0"
+                        Margin="0"
+                        IsEnabled="true" 
+                        BackgroundColor="Transparent" 
+                        TextColor="#1d2426"/>
+                </Frame>
+
+                <Frame 
+                    Grid.Row="2"
+                    Margin="16"
+                    Padding="0"
+                    CornerRadius="10"
+                    VerticalOptions="Center" 
+                    HeightRequest="60" 
+                    WidthRequest="30" 
+                    BorderColor="White"
+                    BackgroundColor="#ffffff"
+                    HasShadow="True">
+                    <Button 
+                        BorderColor="White"
+                        Text="Inovador" 
+                        FontSize="19"                             
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Fill"
+                        WidthRequest="30"
+                        HeightRequest="60"   
+                        Padding="0"
+                        Margin="0"
+                        IsEnabled="true" 
+                        BackgroundColor="Transparent" 
+                        TextColor="#1d2426"/>
+                </Frame>
+
+                <Frame 
+                    Grid.Row="3"
+                    Margin="16"
+                    Padding="0"
+                    CornerRadius="10"
+                    VerticalOptions="Center" 
+                    HeightRequest="60" 
+                    WidthRequest="30" 
+                    BorderColor="White"
+                    BackgroundColor="#ffffff"
+                    HasShadow="True">
+                    <Button 
+                        BorderColor="White"
+                        Text="Objetivo" 
+                        FontSize="19"                             
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Fill"
+                        WidthRequest="30"
+                        HeightRequest="60"   
+                        Padding="0"
+                        Margin="0"
+                        IsEnabled="true" 
+                        BackgroundColor="Transparent" 
+                        TextColor="#1d2426"/>
+                </Frame>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
