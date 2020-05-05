@@ -1,11 +1,17 @@
 ﻿using MemoryGameForLawyers.Utils;
 using Rg.Plugins.Popup.Extensions;
 using System;
+using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using System.Collections.Generic;
+using Xamarin.Essentials;
 
+[assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MemoryGameForLawyers
 {
   public partial class App : Application

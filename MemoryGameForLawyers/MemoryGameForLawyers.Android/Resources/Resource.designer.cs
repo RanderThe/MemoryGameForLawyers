@@ -9551,8 +9551,14 @@ namespace MemoryGameForLawyers.Droid
 			// aapt resource value: 0x7F0E00C7
 			public const int MainTheme_Base = 2131624135;
 			
+			// aapt resource value: 0x7F0E01FB
+			public const int mybutton_text = 2131624443;
+			
 			// aapt resource value: 0x7F0E00C8
 			public const int MyPopupMenu = 2131624136;
+			
+			// aapt resource value: 0x7F0E01FA
+			public const int myTheme = 2131624442;
 			
 			// aapt resource value: 0x7F0E00C9
 			public const int Platform_AppCompat = 2131624137;
