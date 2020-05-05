@@ -14,6 +14,7 @@ namespace MemoryGameForLawyers.Quiz
   {
     public Pergunta9()
     {
+      Title = "Pergunta 9";
       InitializeComponent();
     }
   }
