@@ -8,10 +8,18 @@ using Android.Widget;
 using Android.OS;
 using MemoryGameForLawyers.Droid;
 using Rg.Plugins.Popup;
+using Android.Webkit;
+using Refractored.XamForms.PullToRefresh.Droid;
 
 namespace MemoryGameForLawyers.Droid
 {
-  [Activity(Label = "Escolha Direito", Icon = "@drawable/EscolhaDireito", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+  [Activity(Label = "Escolha Direito", 
+    Icon = "@drawable/EscolhaDireito", 
+    Theme = "@style/MainTheme", 
+    MainLauncher = true,
+    ScreenOrientation = ScreenOrientation.Portrait,
+    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+
   public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
   {
     protected override void OnCreate(Bundle savedInstanceState)
@@ -20,7 +28,10 @@ namespace MemoryGameForLawyers.Droid
       ToolbarResource = Resource.Layout.Toolbar;
 
       base.OnCreate(savedInstanceState);
+      global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+      PullToRefreshLayoutRenderer.Init();
       Popup.Init(this, savedInstanceState);
+      Plugin.InputKit.Platforms.Droid.Config.Init(this, savedInstanceState);
 
 
       Xamarin.Essentials.Platform.Init(this, savedInstanceState);

@@ -12,6 +12,7 @@ namespace MemoryGameForLawyers
   [XamlCompilation(XamlCompilationOptions.Compile)]
   public partial class MemoryGame : ContentPage
   {
+
     StackLayout[] stackSorteio;
     List<StackLayout> stackMatched = new List<StackLayout>();
     List<StackLayout> stacksPais = new List<StackLayout>();
@@ -27,7 +28,6 @@ namespace MemoryGameForLawyers
     public const string JulgadorDeLicitacao = "Exerçam a função de receber, examinar e julgar todos os documentos e procedimentos relativos às licitações e ao cadastramento de licitantes, conforme o artigo 6º, XVI da Lei 8666/93.";
     public const string GerenteJuridico = "Atua como gestor e mentor, contribuindo para a formação dos membros da equipe. É responsável por uma adequação jurídica completa na empresa, devendo ter uma clara comunicação com diversos outros setores da organização.";
     public const string AuditorJuridico = "Assessorar e coordenar a revisão de processos de qualquer natureza, ou proceder a avaliação de uma ou diversas situações concretas que lhe são apresentadas para que emita um parecer vinculante, observando princípios éticos e legais.";
-
     public string[] profissionais = new string[4] { "teacherFeminino", "executivoFeminino", "gerenteMasculino", "auditorFeminino" };
     public string[] descricoes = new string[4] { Professor, JulgadorDeLicitacao, GerenteJuridico, AuditorJuridico };
 
@@ -233,39 +233,6 @@ namespace MemoryGameForLawyers
         }
       }
       return stackSorteio[0];
-      //if (stackSelected.Children.Contains(stackSorteio[0]))
-      //{
-      //  return stackSorteio[1];
-      //}
-      //if (stackSelected.Children.Contains(stackSorteio[1]))
-      //{
-      //  return stackSorteio[0];
-      //}
-      //if (stackSelected.Children.Contains(stackSorteio[2]))
-      //{
-      //  return stackSorteio[3];
-      //}
-      //if (stackSelected.Children.Contains(stackSorteio[3]))
-      //{
-      //  return stackSorteio[2];
-      //}
-      //if (stackSelected.Children.Contains(stackSorteio[4]))
-      //{
-      //  return stackSorteio[5];
-      //}
-      //if (stackSelected.Children.Contains(stackSorteio[5]))
-      //{
-      //  return stackSorteio[4];
-      //}
-      //if (stackSelected.Children.Contains(stackSorteio[6]))
-      //{
-      //  return stackSorteio[7];
-      //}
-      //if (stackSelected.Children.Contains(stackSorteio[7]))
-      //{
-      //  return stackSorteio[6];
-      //}
-      //return stackSorteio[0];
     }
     public bool VerificaStackLayoutVisible(StackLayout stackOriginalSelected)
     {
@@ -275,6 +242,46 @@ namespace MemoryGameForLawyers
       }
       return false;
     }
+    public void SetItensInvisible()
+    {
+      StackLayout[] stacksIconDireito = new StackLayout[8] { StackIconDireito0, StackIconDireito1, StackIconDireito2, StackIconDireito3, StackIconDireito4, StackIconDireito5, StackIconDireito6, StackIconDireito7 };
+      StackLayout[] stacksDoSorteio = new StackLayout[8] { StackLayout00, StackLayout01, StackLayout02, StackLayout03, StackLayout04, StackLayout05, StackLayout06, StackLayout07 };
+
+      if (CountStackLayoutVisible() > 1)
+      {
+        for (int i = 0; i < 8; i++)
+        {
+          if (stackMatched.Contains(stacksIconDireito[i]) == false)
+          {
+            stacksIconDireito[i].IsVisible = true;
+            stacksDoSorteio[i].IsVisible = false;
+          }
+          else if (stackMatched.Contains(stacksIconDireito[i]) == true)
+          {
+            stacksIconDireito[i].IsVisible = false;
+            stacksDoSorteio[i].IsVisible = true;
+          }
+        }
+      }
+    }
+    public int CountStackLayoutVisible()
+    {
+      StackLayout[] stacksDoSorteio = new StackLayout[8] { StackLayout00, StackLayout01, StackLayout02, StackLayout03, StackLayout04, StackLayout05, StackLayout06, StackLayout07 };
+
+      int contador = 0;
+      foreach (StackLayout item in stacksDoSorteio)
+      {
+        if (stackMatched.Contains(item) == false)
+        {
+          if (item.IsVisible)
+          {
+            contador++;
+          }
+        }
+      }
+      return contador;
+    }
+
     public StackLayout VerificaStackLayoutCorrespondente(StackLayout stackSelected)
     {
       foreach (StackLayout item in stacksPais)
@@ -284,38 +291,6 @@ namespace MemoryGameForLawyers
           return item;
         }
       }
-      //if (StackLayout00.Children.Contains(stackSelected))
-      //{
-      //  return StackLayout00;
-      //}
-      //if (StackLayout01.Children.Contains(stackSelected))
-      //{
-      //  return StackLayout01;
-      //}
-      //if (StackLayout02.Children.Contains(stackSelected))
-      //{
-      //  return StackLayout02;
-      //}
-      //if (StackLayout03.Children.Contains(stackSelected))
-      //{
-      //  return StackLayout03;
-      //}
-      //if (StackLayout04.Children.Contains(stackSelected))
-      //{
-      //  return StackLayout04;
-      //}
-      //if (StackLayout05.Children.Contains(stackSelected))
-      //{
-      //  return StackLayout05;
-      //}
-      //if (StackLayout06.Children.Contains(stackSelected))
-      //{
-      //  return StackLayout06;
-      //}
-      //if (StackLayout07.Children.Contains(stackSelected))
-      //{
-      //  return StackLayout07;
-      //}
       return stackSorteio[0];
     }
     private void ChangeFrameColors(StackLayout Stack1, StackLayout Stack2)
@@ -356,6 +331,7 @@ namespace MemoryGameForLawyers
         stackMatched.Add(StackLayout00);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout00);
       }
+      SetItensInvisible();
     }
 
     private void ImageButton_Clicked_1(object sender, EventArgs e)
@@ -371,6 +347,7 @@ namespace MemoryGameForLawyers
         stackMatched.Add(StackLayout01);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout01);
       }
+      SetItensInvisible();
     }
 
     private void ImageButton_Clicked_2(object sender, EventArgs e)
@@ -386,8 +363,8 @@ namespace MemoryGameForLawyers
         stackMatched.Add(StackLayout02);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout02);
       }
+      SetItensInvisible();
     }
-
 
     private void ImageButton_Clicked_3(object sender, EventArgs e)
     {
@@ -402,6 +379,7 @@ namespace MemoryGameForLawyers
         stackMatched.Add(StackLayout03);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout03);
       }
+      SetItensInvisible();
     }
 
     private void ImageButton_Clicked_4(object sender, EventArgs e)
@@ -417,6 +395,7 @@ namespace MemoryGameForLawyers
         stackMatched.Add(StackLayout04);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout04);
       }
+      SetItensInvisible();
     }
 
     private void ImageButton_Clicked_5(object sender, EventArgs e)
@@ -432,6 +411,7 @@ namespace MemoryGameForLawyers
         stackMatched.Add(StackLayout05);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout05);
       }
+      SetItensInvisible();
     }
 
     private void ImageButton_Clicked_6(object sender, EventArgs e)
@@ -447,6 +427,7 @@ namespace MemoryGameForLawyers
         stackMatched.Add(StackLayout06);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout06);
       }
+      SetItensInvisible();
     }
 
     private void ImageButton_Clicked_7(object sender, EventArgs e)
@@ -462,6 +443,7 @@ namespace MemoryGameForLawyers
         stackMatched.Add(StackLayout07);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout07);
       }
+      SetItensInvisible();
     }
 
     #endregion
@@ -470,52 +452,84 @@ namespace MemoryGameForLawyers
 
     private void StackLayout00Tapped(object sender, EventArgs e)
     {
-      StackIconDireito0.IsVisible = true;
-      StackLayout00.IsVisible = false;
+      if (!VerificaMatch(StackLayout00))
+      {
+        StackIconDireito0.IsVisible = true;
+        StackLayout00.IsVisible = false;
+      }
     }
 
     private void StackLayout01Tapped(object sender, EventArgs e)
     {
-      StackIconDireito1.IsVisible = true;
-      StackLayout01.IsVisible = false;
+      if (!VerificaMatch(StackLayout01))
+      {
+        StackIconDireito1.IsVisible = true;
+        StackLayout01.IsVisible = false;
+      }
     }
 
     private void StackLayout02Tapped(object sender, EventArgs e)
     {
-      StackIconDireito2.IsVisible = true;
-      StackLayout02.IsVisible = false;
+      if (!VerificaMatch(StackLayout02))
+      {
+        StackIconDireito2.IsVisible = true;
+        StackLayout02.IsVisible = false;
+      }
     }
 
     private void StackLayout03Tapped(object sender, EventArgs e)
     {
-      StackIconDireito3.IsVisible = true;
-      StackLayout03.IsVisible = false;
+      if (!VerificaMatch(StackLayout03))
+      {
+        StackIconDireito3.IsVisible = true;
+        StackLayout03.IsVisible = false;
+      }
     }
 
     private void StackLayout04Tapped(object sender, EventArgs e)
     {
-      StackIconDireito4.IsVisible = true;
-      StackLayout04.IsVisible = false;
+      if (!VerificaMatch(StackLayout04))
+      {
+        StackIconDireito4.IsVisible = true;
+        StackLayout04.IsVisible = false;
+      }
     }
 
     private void StackLayout05Tapped(object sender, EventArgs e)
     {
-      StackIconDireito5.IsVisible = true;
-      StackLayout05.IsVisible = false;
+      if (!VerificaMatch(StackLayout05))
+      {
+        StackIconDireito5.IsVisible = true;
+        StackLayout05.IsVisible = false;
+      }
     }
 
     private void StackLayout06Tapped(object sender, EventArgs e)
     {
-      StackIconDireito6.IsVisible = true;
-      StackLayout06.IsVisible = false;
+      if (!VerificaMatch(StackLayout06))
+      {
+        StackIconDireito6.IsVisible = true;
+        StackLayout06.IsVisible = false;
+      }
     }
 
     private void StackLayout07Tapped(object sender, EventArgs e)
     {
-      StackIconDireito7.IsVisible = true;
-      StackLayout07.IsVisible = false;
+      if (!VerificaMatch(StackLayout07))
+      {
+        StackIconDireito7.IsVisible = true;
+        StackLayout07.IsVisible = false;
+      }
     }
 
+    private bool VerificaMatch(StackLayout stackLayout)
+    {
+      if (stackMatched.Contains(stackLayout) == true)
+      {
+        return true;
+      }
+      return false;
+    }
     #endregion
   }
 }
