@@ -7,7 +7,7 @@
              x:Class="MemoryGameForLawyers.Quiz.Pergunta6">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#fbfbfb" Padding="0" Margin="0">
-            <Label Text="Você prefere: "
+            <Label Text="Você se considera mais:"
                    FontAttributes="Bold"
                    FontSize="24"
                    Margin="0,20,0,0"
@@ -34,7 +34,7 @@
                     <Button 
                         Clicked="Button_Clicked"
                         BorderColor="White"
-                        Text="Ficar em casa" 
+                        Text="Paciente" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"
@@ -56,7 +56,7 @@
                     HasShadow="True">
                     <Button Clicked="Button_Clicked_1"
                         BorderColor="White"
-                        Text="Organizar uma festa" 
+                        Text="Direto" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"
@@ -78,7 +78,7 @@
                     HasShadow="True">
                     <Button Clicked="Button_Clicked_2"
                         BorderColor="White"
-                        Text="Sair com amigos" 
+                        Text="Criativo" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"
@@ -101,7 +101,7 @@
                     <Button 
                         Clicked="Button_Clicked_3"
                         BorderColor="White"
-                        Text="Ler um livro" 
+                        Text="Pontual" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"

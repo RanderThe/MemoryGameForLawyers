@@ -97,7 +97,7 @@ namespace MemoryGameForLawyers.Quiz
       }
       else if (Btn1.BorderColor == Color.LightGreen)
       {
-        _quizModel.julgadorDeLicitacao++;
+        _quizModel.auditorJuridico++;
       }
       else if (Btn2.BorderColor == Color.LightGreen)
       {
@@ -105,21 +105,21 @@ namespace MemoryGameForLawyers.Quiz
       }
       else if (Btn3.BorderColor == Color.LightGreen)
       {
-        _quizModel.auditorJuridico++;
+        _quizModel.julgadorDeLicitacao++;
       }
     }
 
     private void Avancar_Clicked(object sender, EventArgs e)
     {
       SetProfissao();
-      //Device.BeginInvokeOnMainThread(async () =>
-      //{
-      //  await App.CreateWaitPage(Color.White, "Carregando jogo");
-      //  await Navigation.PushAsync(new Pergunta3(_quizModel)
-      //  {
-      //  });
-      //  await App.DestroiWaitPage();
-      //});
+      Device.BeginInvokeOnMainThread(async () =>
+      {
+        await App.CreateWaitPage(Color.White, "Carregando jogo");
+        await Navigation.PushAsync(new QuizResult(_quizModel)
+        {
+        });
+        await App.DestroiWaitPage();
+      });
 
     }
   }

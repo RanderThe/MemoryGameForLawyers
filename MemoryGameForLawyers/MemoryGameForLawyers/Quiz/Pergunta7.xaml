@@ -7,7 +7,7 @@
              x:Class="MemoryGameForLawyers.Quiz.Pergunta7">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#fbfbfb" Padding="0" Margin="0">
-            <Label Text="Você prefere: "
+            <Label Text="Você gosta: "
                    FontAttributes="Bold"
                    FontSize="24"
                    Margin="0,20,0,0"
@@ -17,8 +17,6 @@
                    HorizontalOptions="CenterAndExpand" />
             <Grid>
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
@@ -34,7 +32,7 @@
                     <Button 
                         Clicked="Button_Clicked"
                         BorderColor="White"
-                        Text="Ficar em casa" 
+                        Text="De ser o centro das atenções" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"
@@ -56,52 +54,7 @@
                     HasShadow="True">
                     <Button Clicked="Button_Clicked_1"
                         BorderColor="White"
-                        Text="Organizar uma festa" 
-                        FontSize="19"                             
-                        VerticalOptions="Center" 
-                        HorizontalOptions="Fill"
-                        Padding="0"
-                        Margin="0"
-                        IsEnabled="true" 
-                        BackgroundColor="Transparent" 
-                        TextColor="#1d2426"/>
-                </Frame>
-
-                <Frame x:Name="Btn2"
-                    Grid.Row="2"
-                    Margin="16"
-                    Padding="0"
-                    CornerRadius="10"
-                    VerticalOptions="Center" 
-                    BorderColor="White"
-                    BackgroundColor="#ffffff"
-                    HasShadow="True">
-                    <Button Clicked="Button_Clicked_2"
-                        BorderColor="White"
-                        Text="Sair com amigos" 
-                        FontSize="19"                             
-                        VerticalOptions="Center" 
-                        HorizontalOptions="Fill"
-                        Padding="0"
-                        Margin="0"
-                        IsEnabled="true" 
-                        BackgroundColor="Transparent" 
-                        TextColor="#1d2426"/>
-                </Frame>
-
-                <Frame x:Name="Btn3"
-                    Grid.Row="3"
-                    Margin="16"
-                    Padding="0"
-                    CornerRadius="10"
-                    VerticalOptions="Center" 
-                    BorderColor="White"
-                    BackgroundColor="#ffffff"
-                    HasShadow="True">
-                    <Button 
-                        Clicked="Button_Clicked_3"
-                        BorderColor="White"
-                        Text="Ler um livro" 
+                        Text="De passar despersebido" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"

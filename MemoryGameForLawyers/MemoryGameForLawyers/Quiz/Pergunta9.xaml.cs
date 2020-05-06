@@ -98,10 +98,12 @@ namespace MemoryGameForLawyers.Quiz
       else if (Btn1.BorderColor == Color.LightGreen)
       {
         _quizModel.julgadorDeLicitacao++;
+        _quizModel.auditorJuridico++;
+        _quizModel.gerenteJuridico++;
       }
       else if (Btn2.BorderColor == Color.LightGreen)
       {
-        _quizModel.gerenteJuridico++;
+        _quizModel.julgadorDeLicitacao++;
       }
       else if (Btn3.BorderColor == Color.LightGreen)
       {
