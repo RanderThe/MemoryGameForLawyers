@@ -10,6 +10,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using System.Collections.Generic;
 using Xamarin.Essentials;
+using DLToolkit.Forms.Controls;
 
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace MemoryGameForLawyers
@@ -20,10 +21,12 @@ namespace MemoryGameForLawyers
     public App()
     {
       InitializeComponent();
+      FlowListView.Init();
     }
 
     protected override void OnStart()
     {
+      base.OnStart();
       Device.BeginInvokeOnMainThread(async () =>
       {
         MainPage = new NavigationPage(new Home()
@@ -34,10 +37,12 @@ namespace MemoryGameForLawyers
 
     protected override void OnSleep()
     {
+      base.OnSleep();
     }
 
     protected override void OnResume()
     {
+      base.OnResume();
     }
 
     public async static Task CreateWaitPage(Color color)

@@ -34,8 +34,8 @@ namespace MemoryGameForLawyers
     {
       Device.BeginInvokeOnMainThread(async () =>
       {
-        await App.CreateWaitPage(Color.White, "Carregando jogo");
-        await Navigation.PushAsync(new Pergunta1()
+        await App.CreateWaitPage(Color.White, "Carregando o Quiz");
+        await Navigation.PushAsync(new QuizPerguntas()
         {
         });
         await App.DestroiWaitPage();

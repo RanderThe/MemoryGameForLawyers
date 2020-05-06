@@ -122,9 +122,10 @@
                     BorderColor="#A52A2A"
                     BackgroundColor="#A52A2A"
                     HasShadow="True">
-                <Button 
+                <Button x:Name="Avançar"
                         BorderColor="White"
-                        Text="avançar" 
+                        Text="Avançar" 
+                        Clicked="Avancar_Clicked"
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"
@@ -132,7 +133,7 @@
                         HeightRequest="60"   
                         Padding="0"
                         Margin="0"
-                        IsEnabled="true" 
+                        IsEnabled="False" 
                         BackgroundColor="Transparent" 
                         TextColor="White"/>
             </Frame>

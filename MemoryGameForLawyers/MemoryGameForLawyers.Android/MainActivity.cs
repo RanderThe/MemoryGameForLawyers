@@ -10,6 +10,7 @@ using MemoryGameForLawyers.Droid;
 using Rg.Plugins.Popup;
 using Android.Webkit;
 using Refractored.XamForms.PullToRefresh.Droid;
+using Android.Util;
 
 namespace MemoryGameForLawyers.Droid
 {
@@ -32,7 +33,14 @@ namespace MemoryGameForLawyers.Droid
       PullToRefreshLayoutRenderer.Init();
       Popup.Init(this, savedInstanceState);
       Plugin.InputKit.Platforms.Droid.Config.Init(this, savedInstanceState);
-
+      if (Intent.Extras != null)
+      {
+        foreach (var key in Intent.Extras.KeySet())
+        {
+          var value = Intent.Extras.GetString(key);
+          Log.Debug("MainActivity", "Key: {0} Value: {1}", key, value);
+        }
+      }
 
       Xamarin.Essentials.Platform.Init(this, savedInstanceState);
       global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
@@ -43,6 +51,12 @@ namespace MemoryGameForLawyers.Droid
       Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);
 
       base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
+    }
+
+    protected virtual void InitPermissions(Bundle bundle)
+    {
+      PullToRefreshLayoutRenderer.Init();
+      Popup.Init(this, bundle);
     }
   }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MemoryGameForLawyers.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,11 +11,24 @@ using Xamarin.Forms.Xaml;
 namespace MemoryGameForLawyers.Quiz
 {
   [XamlCompilation(XamlCompilationOptions.Compile)]
-  public partial class QuizPergunta1 : ContentPage
+  public partial class QuizPerguntas : ContentPage
   {
-    public QuizPergunta1()
+    public QuizPerguntas()
     {
-      InitializeComponent();
+      InitializeComponent();      
+    }
+
+    private void BtnIniciarQuiz_Clicked(object sender, EventArgs e)
+    {
+      QuizModel respostasQuiz = new QuizModel();
+      Device.BeginInvokeOnMainThread(async () =>
+      {
+        await App.CreateWaitPage(Color.White, "Carregando jogo");
+        await Navigation.PushAsync(new Pergunta1(respostasQuiz)
+        {
+        });
+        await App.DestroiWaitPage();
+      });
     }
   }
 }

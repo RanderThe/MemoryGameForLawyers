@@ -4,7 +4,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
-             x:Class="MemoryGameForLawyers.Quiz.QuizPergunta1">
+             x:Class="MemoryGameForLawyers.Quiz.QuizPerguntas">
     <ContentPage.Content>
 
         <Grid>
@@ -14,6 +14,35 @@
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
+
+            <Frame 
+                Grid.Row="3"
+                Margin="40,0,40,20"
+                Padding="0"
+                CornerRadius="10"
+                VerticalOptions="Center" 
+                HeightRequest="60" 
+                WidthRequest="30" 
+                BorderColor="White"
+                BackgroundColor="#ffffff"
+                HasShadow="True">
+                <Button 
+                    BorderColor="White"
+                    x:Name="BtnMemoryGame" 
+                    Text="Iniciar Quiz" 
+                    FontFamily="Exo2Regular.ttf#Exo2Regular"
+                    FontSize="19"                             
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Fill"
+                    WidthRequest="30"
+                    HeightRequest="60"   
+                    Padding="0"
+                    IsEnabled="true" 
+                    Clicked="BtnIniciarQuiz_Clicked"  
+                    BackgroundColor="Transparent" 
+                    TextColor="Black"/>
+            </Frame>
         </Grid>
+
     </ContentPage.Content>
 </ContentPage>

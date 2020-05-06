@@ -4,16 +4,16 @@
     android:id="@+id/splah_layout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:gravity="fill"
+    android:gravity="center_vertical"
     android:orientation="vertical"
     android:background="@drawable/bgGradiente"
     android:minWidth="25px"
     android:minHeight="25px">
     <ImageView
-        android:layout_width="120.0dp"
+        android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="500dp"
         android:layout_marginRight="140dp"
         android:layout_marginLeft="140dp"
-        android:id="@drawable/EscolhaDireito" />
+        android:id="@+id/EscolhaDireito" />
 </RelativeLayout>

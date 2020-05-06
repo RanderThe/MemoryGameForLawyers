@@ -7,7 +7,7 @@
              x:Class="MemoryGameForLawyers.Quiz.Pergunta9">
     <ContentPage.Content>
         <StackLayout BackgroundColor="#fbfbfb" Padding="0" Margin="0">
-            <Label Text="Você se considera mais: "
+            <Label Text="Você prefere: "
                    FontAttributes="Bold"
                    FontSize="24"
                    Margin="0,20,0,0"
@@ -22,25 +22,22 @@
                     <RowDefinition Height="*"></RowDefinition>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>
-                <Frame 
+                <Frame x:Name="Btn0"
                     Grid.Row="0"
                     Margin="16"
                     Padding="0"
                     CornerRadius="10"
                     VerticalOptions="Center" 
-                    HeightRequest="60" 
-                    WidthRequest="30" 
                     BorderColor="White"
                     BackgroundColor="#ffffff"
                     HasShadow="True">
                     <Button 
+                        Clicked="Button_Clicked"
                         BorderColor="White"
-                        Text="Dinâmico" 
+                        Text="Ficar em casa" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"
-                        WidthRequest="30"
-                        HeightRequest="60"   
                         Padding="0"
                         Margin="0"
                         IsEnabled="true" 
@@ -48,25 +45,21 @@
                         TextColor="#1d2426"/>
                 </Frame>
 
-                <Frame 
+                <Frame x:Name="Btn1"
                     Grid.Row="1"
                     Margin="16"
                     Padding="0"
                     CornerRadius="10"
                     VerticalOptions="Center" 
-                    HeightRequest="60" 
-                    WidthRequest="30" 
                     BorderColor="White"
                     BackgroundColor="#ffffff"
                     HasShadow="True">
-                    <Button 
+                    <Button Clicked="Button_Clicked_1"
                         BorderColor="White"
-                        Text="Ágil" 
+                        Text="Organizar uma festa" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"
-                        WidthRequest="30"
-                        HeightRequest="60"   
                         Padding="0"
                         Margin="0"
                         IsEnabled="true" 
@@ -74,25 +67,21 @@
                         TextColor="#1d2426"/>
                 </Frame>
 
-                <Frame 
+                <Frame x:Name="Btn2"
                     Grid.Row="2"
                     Margin="16"
                     Padding="0"
                     CornerRadius="10"
                     VerticalOptions="Center" 
-                    HeightRequest="60" 
-                    WidthRequest="30" 
                     BorderColor="White"
                     BackgroundColor="#ffffff"
                     HasShadow="True">
-                    <Button 
+                    <Button Clicked="Button_Clicked_2"
                         BorderColor="White"
-                        Text="Inovador" 
+                        Text="Sair com amigos" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"
-                        WidthRequest="30"
-                        HeightRequest="60"   
                         Padding="0"
                         Margin="0"
                         IsEnabled="true" 
@@ -100,25 +89,22 @@
                         TextColor="#1d2426"/>
                 </Frame>
 
-                <Frame 
+                <Frame x:Name="Btn3"
                     Grid.Row="3"
                     Margin="16"
                     Padding="0"
                     CornerRadius="10"
                     VerticalOptions="Center" 
-                    HeightRequest="60" 
-                    WidthRequest="30" 
                     BorderColor="White"
                     BackgroundColor="#ffffff"
                     HasShadow="True">
                     <Button 
+                        Clicked="Button_Clicked_3"
                         BorderColor="White"
-                        Text="Objetivo" 
+                        Text="Ler um livro" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"
-                        WidthRequest="30"
-                        HeightRequest="60"   
                         Padding="0"
                         Margin="0"
                         IsEnabled="true" 
@@ -126,6 +112,31 @@
                         TextColor="#1d2426"/>
                 </Frame>
             </Grid>
+            <Frame 
+                    Margin="16,30,16,0"
+                    Padding="0"
+                    CornerRadius="10"
+                    VerticalOptions="Center" 
+                    HeightRequest="60" 
+                    WidthRequest="30" 
+                    BorderColor="#A52A2A"
+                    BackgroundColor="#A52A2A"
+                    HasShadow="True">
+                <Button x:Name="Avançar"
+                        BorderColor="White"
+                        Text="Avançar" 
+                        Clicked="Avancar_Clicked"
+                        FontSize="19"                             
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Fill"
+                        WidthRequest="30"
+                        HeightRequest="60"   
+                        Padding="0"
+                        Margin="0"
+                        IsEnabled="False" 
+                        BackgroundColor="Transparent" 
+                        TextColor="White"/>
+            </Frame>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
