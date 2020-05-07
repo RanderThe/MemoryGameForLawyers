@@ -6,17 +6,21 @@
              mc:Ignorable="d"
              x:Class="MemoryGameForLawyers.Quiz.QuizPerguntas">
     <ContentPage.Content>
-
+        <ScrollView>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="*"></RowDefinition>
                 <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
-                <RowDefinition Height="*"></RowDefinition>
             </Grid.RowDefinitions>
-
+            <Label Grid.Row="0"
+                           Margin="40,30,40,20" 
+                           Text="Selecione a opção com que você se identifica mais !" 
+                           FontFamily="Exo2Bold.ttf#Exo2Bold"
+                           TextColor="Black" 
+                           HorizontalTextAlignment="Center"
+                           FontSize="36"></Label>
             <Frame 
-                Grid.Row="3"
+                Grid.Row="1"
                 Margin="40,0,40,20"
                 Padding="0"
                 CornerRadius="10"
@@ -43,6 +47,6 @@
                     TextColor="Black"/>
             </Frame>
         </Grid>
-
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

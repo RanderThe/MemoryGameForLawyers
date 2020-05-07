@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="MemoryGameForLawyers.Quiz.Pergunta7">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout BackgroundColor="#fbfbfb" Padding="0" Margin="0">
             <Label Text="Você gosta: "
                    FontAttributes="Bold"
@@ -54,7 +55,7 @@
                     HasShadow="True">
                     <Button Clicked="Button_Clicked_1"
                         BorderColor="White"
-                        Text="De passar despersebido" 
+                        Text="De passar despercebido" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"
@@ -91,5 +92,6 @@
                         TextColor="White"/>
             </Frame>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

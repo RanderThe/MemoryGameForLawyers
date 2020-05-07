@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="MemoryGameForLawyers.Quiz.Pergunta9">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout BackgroundColor="#fbfbfb" Padding="0" Margin="0">
             <Label Text="Se interessa por:"
                    FontAttributes="Bold"
@@ -101,7 +102,7 @@
                     <Button 
                         Clicked="Button_Clicked_3"
                         BorderColor="White"
-                        Text="Cordenar" 
+                        Text="Coordenar" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"
@@ -138,5 +139,6 @@
                         TextColor="White"/>
             </Frame>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

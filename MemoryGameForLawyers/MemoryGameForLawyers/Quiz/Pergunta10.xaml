@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="MemoryGameForLawyers.Quiz.Pergunta10">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout BackgroundColor="#fbfbfb" Padding="0" Margin="0">
             <Label Text="Você se vê mais como um:"
                    FontAttributes="Bold"
@@ -138,5 +139,6 @@
                         TextColor="White"/>
             </Frame>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -114,7 +114,7 @@ namespace MemoryGameForLawyers.Quiz
       SetProfissao();
       Device.BeginInvokeOnMainThread(async () =>
       {
-        await App.CreateWaitPage(Color.White, "Carregando jogo");
+        await App.CreateWaitPage(Color.White, "Carregando pergunta 3");
         await Navigation.PushAsync(new Pergunta3(_quizModel)
         {
         });

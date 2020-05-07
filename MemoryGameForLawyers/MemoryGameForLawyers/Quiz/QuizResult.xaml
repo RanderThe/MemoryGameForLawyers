@@ -6,6 +6,7 @@
              mc:Ignorable="d"
              x:Class="MemoryGameForLawyers.Quiz.QuizResult">
     <ContentPage.Content>
+        <ScrollView>
         <StackLayout>
             <Label Text="Seu perfil é compatível com: "
                    FontAttributes="Bold"
@@ -54,5 +55,6 @@
             </Frame>
 
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

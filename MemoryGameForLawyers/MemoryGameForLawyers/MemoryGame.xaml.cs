@@ -307,7 +307,7 @@ namespace MemoryGameForLawyers
           stacksDoSorteio[item].IsVisible = false;
           stacksIconDireito[item].IsVisible = true;
         }
-      }      
+      }
     }
 
     public StackLayout VerificaStackLayoutCorrespondente(StackLayout stackSelected)
@@ -354,13 +354,13 @@ namespace MemoryGameForLawyers
       StackLayout stackOriginalSelected = VerificaStackLayout(StackLayout00);
       StackLayout stackOriginalCorrespondente = VerificaStackLayoutCorrespondente(stackOriginalSelected);
 
-      
+
       if (VerificaStackLayoutVisible(stackOriginalCorrespondente))
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout00);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout00);
-      }   
+      }
     }
 
     private void ImageButton_Clicked_1(object sender, EventArgs e)
@@ -371,7 +371,7 @@ namespace MemoryGameForLawyers
       StackLayout stackOriginalSelected = VerificaStackLayout(StackLayout01);
       StackLayout stackOriginalCorrespondente = VerificaStackLayoutCorrespondente(stackOriginalSelected);
 
-    
+
       if (VerificaStackLayoutVisible(stackOriginalCorrespondente))
       {
         stackMatched.Add(stackOriginalCorrespondente);
@@ -389,7 +389,7 @@ namespace MemoryGameForLawyers
       StackLayout stackOriginalSelected = VerificaStackLayout(StackLayout02);
       StackLayout stackOriginalCorrespondente = VerificaStackLayoutCorrespondente(stackOriginalSelected);
 
-     
+
       if (VerificaStackLayoutVisible(stackOriginalCorrespondente))
       {
         stackMatched.Add(stackOriginalCorrespondente);
@@ -407,14 +407,14 @@ namespace MemoryGameForLawyers
       StackLayout stackOriginalSelected = VerificaStackLayout(StackLayout03);
       StackLayout stackOriginalCorrespondente = VerificaStackLayoutCorrespondente(stackOriginalSelected);
 
-    
+
       if (VerificaStackLayoutVisible(stackOriginalCorrespondente))
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout03);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout03);
       }
-    
+
     }
 
     private void ImageButton_Clicked_4(object sender, EventArgs e)
@@ -425,14 +425,14 @@ namespace MemoryGameForLawyers
       StackLayout stackOriginalSelected = VerificaStackLayout(StackLayout04);
       StackLayout stackOriginalCorrespondente = VerificaStackLayoutCorrespondente(stackOriginalSelected);
 
-   
+
       if (VerificaStackLayoutVisible(stackOriginalCorrespondente))
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout04);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout04);
       }
- 
+
     }
 
     private void ImageButton_Clicked_5(object sender, EventArgs e)
@@ -443,14 +443,14 @@ namespace MemoryGameForLawyers
       StackLayout stackOriginalSelected = VerificaStackLayout(StackLayout05);
       StackLayout stackOriginalCorrespondente = VerificaStackLayoutCorrespondente(stackOriginalSelected);
 
-  
+
       if (VerificaStackLayoutVisible(stackOriginalCorrespondente))
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout05);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout05);
       }
-      
+
     }
 
     private void ImageButton_Clicked_6(object sender, EventArgs e)
@@ -461,14 +461,14 @@ namespace MemoryGameForLawyers
       StackLayout stackOriginalSelected = VerificaStackLayout(StackLayout06);
       StackLayout stackOriginalCorrespondente = VerificaStackLayoutCorrespondente(stackOriginalSelected);
 
-     
+
       if (VerificaStackLayoutVisible(stackOriginalCorrespondente))
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout06);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout06);
       }
-   
+
     }
 
     private void ImageButton_Clicked_7(object sender, EventArgs e)
@@ -479,14 +479,14 @@ namespace MemoryGameForLawyers
       StackLayout stackOriginalSelected = VerificaStackLayout(StackLayout07);
       StackLayout stackOriginalCorrespondente = VerificaStackLayoutCorrespondente(stackOriginalSelected);
 
-  
+
       if (VerificaStackLayoutVisible(stackOriginalCorrespondente))
       {
         stackMatched.Add(stackOriginalCorrespondente);
         stackMatched.Add(StackLayout07);
         ChangeFrameColors(stackOriginalCorrespondente, StackLayout07);
       }
-    
+
     }
 
     #endregion
@@ -574,5 +574,10 @@ namespace MemoryGameForLawyers
       return false;
     }
     #endregion
+
+    private void ImageButton_Clicked(object sender, EventArgs e)
+    {
+      Navigation.PopAsync();
+    }
   }
 }

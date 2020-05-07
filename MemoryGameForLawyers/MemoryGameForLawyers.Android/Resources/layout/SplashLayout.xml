@@ -6,7 +6,7 @@
     android:layout_height="fill_parent"
     android:gravity="center_vertical"
     android:orientation="vertical"
-    android:background="@android:color/holo_red_dark"
+    android:background="@android:color/white"
     android:minWidth="25px"
     android:minHeight="25px">
     <ImageView
@@ -15,11 +15,4 @@
         android:layout_height="match_parent"
         android:layout_marginTop="6.0dp"
         android:layout_centerHorizontal="true"/>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="match_parent"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="Escolha Direito"
-    android:textSize="30"/>
 </RelativeLayout>

@@ -6,8 +6,9 @@
              mc:Ignorable="d"
              x:Class="MemoryGameForLawyers.Quiz.Pergunta5">
     <ContentPage.Content>
-        <StackLayout BackgroundColor="#fbfbfb" Padding="0" Margin="0">
-            <Label Text="Quando você decide algo, você:"
+        <ScrollView>
+            <StackLayout BackgroundColor="#fbfbfb" Padding="0" Margin="0">
+                <Label Text="Quando você decide algo, você:"
                    FontAttributes="Bold"
                    FontSize="24"
                    Margin="0,20,0,0"
@@ -15,12 +16,12 @@
                    VerticalOptions="Start" 
                    TextColor="Black"
                    HorizontalOptions="CenterAndExpand" />
-            <Grid>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="*"></RowDefinition>
-                    <RowDefinition Height="*"></RowDefinition>
-                </Grid.RowDefinitions>
-                <Frame x:Name="Btn0"
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"></RowDefinition>
+                        <RowDefinition Height="*"></RowDefinition>
+                    </Grid.RowDefinitions>
+                    <Frame x:Name="Btn0"
                     Grid.Row="0"
                     Margin="16"
                     Padding="0"
@@ -29,10 +30,10 @@
                     BorderColor="White"
                     BackgroundColor="#ffffff"
                     HasShadow="True">
-                    <Button 
+                        <Button 
                         Clicked="Button_Clicked"
                         BorderColor="White"
-                        Text="Manter firme seu posicionamento" 
+                        Text="Mantém firme seu posicionamento" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"
@@ -41,9 +42,9 @@
                         IsEnabled="true" 
                         BackgroundColor="Transparent" 
                         TextColor="#1d2426"/>
-                </Frame>
+                    </Frame>
 
-                <Frame x:Name="Btn1"
+                    <Frame x:Name="Btn1"
                     Grid.Row="1"
                     Margin="16"
                     Padding="0"
@@ -52,9 +53,9 @@
                     BorderColor="White"
                     BackgroundColor="#ffffff"
                     HasShadow="True">
-                    <Button Clicked="Button_Clicked_1"
+                        <Button Clicked="Button_Clicked_1"
                         BorderColor="White"
-                        Text="Costuma ser flexivel e maleavel na vontade das pessoas" 
+                        Text="Costuma ser flexivel e maleável na vontade das pessoas" 
                         FontSize="19"                             
                         VerticalOptions="Center" 
                         HorizontalOptions="Fill"
@@ -63,10 +64,10 @@
                         IsEnabled="true" 
                         BackgroundColor="Transparent" 
                         TextColor="#1d2426"/>
-                </Frame>
-                
-            </Grid>
-            <Frame 
+                    </Frame>
+
+                </Grid>
+                <Frame 
                     Margin="16,30,16,0"
                     Padding="0"
                     CornerRadius="10"
@@ -76,7 +77,7 @@
                     BorderColor="#A52A2A"
                     BackgroundColor="#A52A2A"
                     HasShadow="True">
-                <Button x:Name="Avançar"
+                    <Button x:Name="Avançar"
                         BorderColor="White"
                         Text="Avançar" 
                         Clicked="Avancar_Clicked"
@@ -90,7 +91,8 @@
                         IsEnabled="False" 
                         BackgroundColor="Transparent" 
                         TextColor="White"/>
-            </Frame>
-        </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

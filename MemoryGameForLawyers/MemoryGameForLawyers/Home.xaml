@@ -21,7 +21,6 @@
                                               HeightRequest="99999"
                                               VerticalOptions="Fill" 
                                               HorizontalOptions="Fill" >
-                    <Label Text="teste"></Label>
                 </custom:CustomFrameGradiente>
 
                 <Grid Grid.Row="0" Margin="0" Padding="0" VerticalOptions="Center" ColumnSpacing="0" RowSpacing="0" BackgroundColor="Transparent">
@@ -61,7 +60,7 @@
                         HasShadow="True">
                         <Button 
                             BorderColor="White"
-                            Text="Memory Game" 
+                            Text="Jogo da Memória" 
                             FontFamily="Exo2Regular.ttf#Exo2Regular"
                             FontSize="19"                             
                             VerticalOptions="Center" 
