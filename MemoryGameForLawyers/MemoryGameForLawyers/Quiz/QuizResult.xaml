@@ -7,9 +7,52 @@
              x:Class="MemoryGameForLawyers.Quiz.QuizResult">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Seu perfil é compatível com: "
+                   FontAttributes="Bold"
+                   FontSize="24"
+                   Margin="0,20,0,20"
+                   Padding="0"
+                   HorizontalTextAlignment="Center"
+                   VerticalOptions="Center" 
+                   TextColor="Black"
+                   HorizontalOptions="CenterAndExpand" />
+            <Image x:Name="ImgProfissional"/>
+            <Label x:Name="LabelNameProfissao" FontSize="20" HorizontalOptions="Center"></Label>
+
+            <Frame Margin="40" 
+                   VerticalOptions="Center" 
+                   BorderColor="White" 
+                   BackgroundColor="White"
+                   CornerRadius="5"
+                   HasShadow="True">
+                <Label x:Name="LabelDescricaoProfissao"></Label>
+            </Frame>
+            <Frame 
+                    Margin="40,0,40,0"
+                    Padding="0"
+                    CornerRadius="10"
+                    VerticalOptions="Center" 
+                    HeightRequest="60" 
+                    WidthRequest="30" 
+                    BorderColor="#A52A2A"
+                    BackgroundColor="#A52A2A"
+                    HasShadow="True">
+                <Button x:Name="Finalizar"
+                        BorderColor="White"
+                        Text="Finalizar" 
+                        Clicked="Finalizar_Clicked"
+                        FontSize="19"                             
+                        VerticalOptions="Center" 
+                        HorizontalOptions="Fill"
+                        WidthRequest="30"
+                        HeightRequest="60"   
+                        Padding="0"
+                        Margin="0"
+                        IsEnabled="True" 
+                        BackgroundColor="Transparent" 
+                        TextColor="White"/>
+            </Frame>
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

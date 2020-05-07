@@ -32,7 +32,6 @@ namespace MemoryGameForLawyers
 
     public MemoryGame()
     {
-      //App.DestroiWaitPage();
       InitializeComponent();
     }
 
@@ -120,8 +119,6 @@ namespace MemoryGameForLawyers
       StackLayout auditorJuridicoImg = new StackLayout();
       StackLayout auditorJuridicoDesc = new StackLayout();
       stackSorteio = new StackLayout[8] { professorImg, professorDesc, julgadorDeLicitacaoImg, julgadorDeLicitacaoDesc, gerenteJuridicoImg, gerenteJuridicoDesc, auditorJuridicoImg, auditorJuridicoDesc };
-
-
 
       CreateOcupations(imageOcupations, labelOcupations, frameOcupations, stackOcupations);
       CreateDescriptions(frameDescriptions, labelDescriptions);
