@@ -7,14 +7,15 @@ using Android.App;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("MemoryGameForLawyers.Android")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Aplicativo para orientação profissional")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("TheRander")]
 [assembly: AssemblyProduct("MemoryGameForLawyers.Android")]
 [assembly: AssemblyCopyright("Copyright ©  2014")]
-[assembly: AssemblyTrademark("")]
+[assembly: AssemblyTrademark("TheRander")]
 [assembly: AssemblyCulture("")]
 [assembly: ComVisible(false)]
+[assembly: Application(Label = "Escolha Direito")]
 
 // Version information for an assembly consists of the following four values:
 //
