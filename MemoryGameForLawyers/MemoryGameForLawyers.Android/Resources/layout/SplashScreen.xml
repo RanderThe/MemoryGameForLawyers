@@ -1,7 +1,7 @@
 ﻿
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/splah_layout"
+    android:id="@+id/SplashScreen"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:gravity="center_vertical"

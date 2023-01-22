@@ -9,7 +9,7 @@
              NavigationPage.HasNavigationBar="False">
     <ContentPage.Content>
         <StackLayout Padding="0" Margin="0" Spacing="0">
-            <Grid Margin="0" ColumnSpacing="0" RowSpacing="0">
+            <Grid Margin="0" ColumnSpacing="0" RowSpacing="0" BackgroundColor="#8B0000">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"></RowDefinition>
                 </Grid.RowDefinitions>

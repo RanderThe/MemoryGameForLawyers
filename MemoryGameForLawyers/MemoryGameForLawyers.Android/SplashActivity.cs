@@ -13,26 +13,26 @@ using Android.Widget;
 namespace MemoryGameForLawyers.Droid
 {
 
-  [Activity(Theme = "@style/Theme.Splash", MainLauncher = true, NoHistory = true)]
-  public class SplashActivity : Activity
-  {
-    System.Timers.Timer timer = null;
-    protected override void OnCreate(Bundle savedInstanceState)
+    [Activity(Theme = "@style/MyTheme.Splash", MainLauncher = true, NoHistory = true)]
+    public class SplashActivity : Activity
     {
-      base.OnCreate(savedInstanceState);
-      SetContentView(Resource.Layout.SplashLayout);
+        System.Timers.Timer timer = null;
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
 
-      timer = new System.Timers.Timer();
-      timer.Interval = 2000;
-      timer.Elapsed += new System.Timers.ElapsedEventHandler(t_Elapsed);
-      timer.Start();
-    }
+            SetContentView(Resource.Layout.SplashScreen);
+            base.OnCreate(savedInstanceState);
+            timer = new System.Timers.Timer();
+            timer.Interval = 1000;
+            timer.Elapsed += new System.Timers.ElapsedEventHandler(t_Elapsed);
+            timer.Start();
+        }
 
-    void t_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
-    {
-      timer.Stop();
-      StartActivity(typeof(MainActivity));
-      Finish();
+        void t_Elapsed(object sender, System.Timers.ElapsedEventArgs e)
+        {
+            timer.Stop();
+            StartActivity(typeof(MainActivity));
+            Finish();
+        }
     }
-  }
 }
